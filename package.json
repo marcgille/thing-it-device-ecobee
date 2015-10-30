@@ -1,0 +1,22 @@
+{
+  "name": "thing-it-device-ecobee",
+  "version": "0.0.1",
+  "description": "[thing-it-node] Device Plugin for ecobee © products.",
+  "authors": "Marc Gille",
+  "license": "MIT, EPL",
+  "keywords": [
+    "IoT",
+    "thing-it",
+    "Bluetooth Smart",
+    "ecobee",
+    "SmartHome",
+    "Energy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcgille/thing-it-device-ecobee"
+  },
+  "dependencies": {
+    "q": "^1.4.1"
+  }
+}
