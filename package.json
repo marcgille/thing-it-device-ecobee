@@ -1,6 +1,6 @@
 {
   "name": "thing-it-device-ecobee",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "[thing-it-node] Device Plugin for ecobee © products.",
   "authors": "Marc Gille",
   "license": "MIT, EPL",
