@@ -60,6 +60,12 @@ function ElectricMeter() {
     ElectricMeter.prototype.start = function () {
         var deferred = q.defer();
 
+        this.operationalState = {
+            status: 'PENDING',
+            message: 'Waiting for initialization...'
+        };
+        this.publishOperationalStateChange();
+
         this.state = {consumption: 0};
 
         if (this.isSimulated()) {
@@ -69,8 +75,21 @@ function ElectricMeter() {
 
                 this.publishStateChange();
             }.bind(this), 10000);
+
+            this.operationalState = {
+                status: 'OK',
+                message: 'Smart Electric Meter successfully initialized'
+            }
+            this.publishOperationalStateChange();
+
             deferred.resolve();
         } else {
+            this.operationalState = {
+                status: 'OK',
+                message: 'Smart Electric Meter successfully initialized'
+            }
+            this.publishOperationalStateChange();
+
             deferred.resolve();
         }
 
